@@ -16,11 +16,14 @@ public class BreackBlock : MonoBehaviour {
 		Move = true;
 		breackBlock = GameObject.FindGameObjectWithTag("breack");
 		puzzle = GameObject.FindGameObjectWithTag("largou");
-		position = breackBlock.transform.position;
+//		position = breackBlock.transform.position;
 		activeRotation = true;
 	}
-
-	void OnTriggerStay(Collider collider){
+	void OnMouseUp()
+	{
+		Destroy(gameObject);
+	}
+	/*void OnTriggerStay(Collider collider){
 		if (collider.gameObject.tag.Equals("breack")) {
 			activeRotation = false;
 			transform.position = collider.transform.position;
@@ -30,7 +33,7 @@ public class BreackBlock : MonoBehaviour {
 			Destroy(this.gameObject);
 
 		}
-	}
+	}*/
 
 	void OnTriggerExit(Collider collider){
 		if (breackBlock.collider) {
@@ -40,7 +43,8 @@ public class BreackBlock : MonoBehaviour {
 
 	  
 
-	public void Rotation(){
+	public void Rotation()
+	{
 		transform.Rotate (Vector3.right);
 		transform.Rotate (Vector3.up, Space.World);
 	}
