@@ -4,7 +4,7 @@ using System.Collections;
 public class BreackBlock : MonoBehaviour {
 
 	public Vector3 position;
-	private GameObject breackBlock;
+	//private GameObject breackBlock;
 	public bool activeRotation;
 	public static bool Move;
 	public GameObject puzzle;
@@ -14,14 +14,15 @@ public class BreackBlock : MonoBehaviour {
 	void Start() {
 
 		Move = true;
-		breackBlock = GameObject.FindGameObjectWithTag("breack");
+		//breackBlock = GameObject.FindGameObjectWithTag("breack");
 		puzzle = GameObject.FindGameObjectWithTag("largou");
 //		position = breackBlock.transform.position;
 		activeRotation = true;
 	}
 	void OnMouseUp()
 	{
-		Destroy(gameObject);
+
+
 	}
 	/*void OnTriggerStay(Collider collider){
 		if (collider.gameObject.tag.Equals("breack")) {
@@ -35,11 +36,12 @@ public class BreackBlock : MonoBehaviour {
 		}
 	}*/
 
-	void OnTriggerExit(Collider collider){
-		if (breackBlock.collider) {
+	/*void OnTriggerExit(Collider collider){
+		if (breackBlock.collider) 
+		{
 			activeRotation = true;
 		}
-	}
+	}*/
 
 	  
 
@@ -50,6 +52,8 @@ public class BreackBlock : MonoBehaviour {
 	}
 
 	void Update(){
+
+
 		if(activeRotation){
 			Rotation();
 		}

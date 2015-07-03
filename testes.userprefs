@@ -1,10 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\Instanciador.cs">
     <Files>
-      <File FileName="..\..\..\..\Contra 3\Assets\Codigos\MoverCamera.cs" Line="32" Column="5" />
-      <File FileName="..\..\..\..\Contra 3\Assets\Codigos\MovePlayer.cs" Line="1" Column="1" />
-      <File FileName="Assets\script\Instanciador.cs" Line="1" Column="1" />
+      <File FileName="Assets\script\catchBlock.cs" Line="1" Column="1" />
+      <File FileName="Assets\script\MasterRotationFuck.cs" Line="19" Column="20" />
+      <File FileName="Assets\script\Instanciador.cs" Line="48" Column="22" />
+      <File FileName="Assets\script\BreackBlock.cs" Line="2" Column="17" />
+      <File FileName="Assets\script\DragColor.cs" Line="4" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

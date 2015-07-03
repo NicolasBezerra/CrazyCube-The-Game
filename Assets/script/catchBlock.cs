@@ -9,9 +9,7 @@ public class catchBlock : MonoBehaviour {
 	private Vector3 offset;
 	private GameObject eu;
 	private Instanciador CatchColor;
-	
-	
-	
+
 	void Start()
 	{
 		CatchColor = GameObject.Find("GameObject").GetComponent<Instanciador>();
@@ -22,7 +20,7 @@ public class catchBlock : MonoBehaviour {
 	}
 	void OnMouseDown() { 
 		screenPoint = Camera.main.WorldToScreenPoint(scanPos);
-		
+
 		offset = scanPos - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 	}
 	void OnMouseDrag() {
@@ -36,8 +34,8 @@ public class catchBlock : MonoBehaviour {
 	void OnMouseUp() 
 	{
 		CatchColor.Mycolor = gameObject.renderer.material.color;
-		
-		this.transform.gameObject.tag = "blocoUsing";
+		CatchColor.coloca = true;
+		this.transform.gameObject.tag = "blocoExit";
 	}
 }
 

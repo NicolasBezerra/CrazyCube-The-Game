@@ -7,16 +7,18 @@ public class Instanciador : MonoBehaviour {
 	private GameObject bloco_am;
 	private GameObject bloco_v;
 	private GameObject bloco_ve;
-	private Vector3 scanPos;
 	private Vector3 lugar;
 	private float tempo = 1;
 	private float segundos;
 	public Color Mycolor;
 	public bool Catching = false;	
 	private int myInt;
+	public float CountTo;
+	public bool coloca;
+	
 	// Use this for initialization
 	void Start () {
-		screenPoint = Camera.main.WorldToScreenPoint(scanPos);
+		screenPoint = Camera.main.WorldToScreenPoint(new Vector3(0,0,0));
 
 		lugar = Camera.main.ScreenToWorldPoint (new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight/10f, screenPoint.z));
 		bloco_a = Resources.Load ("CubeAzul") as GameObject;
@@ -28,6 +30,31 @@ public class Instanciador : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		try
+		{
+			if(GameObject.FindGameObjectWithTag("blocoExit")!= null)
+			{
+				CountTo += Time.deltaTime;
+				if(CountTo > 0.002f)
+				{
+					CountTo = 0;
+					Destroy(GameObject.FindGameObjectWithTag("blocoExit") );
+				}
+			}
+			else if(coloca && Catching)
+			{
+				CountTo += Time.deltaTime;
+				if(CountTo > 0.004f)
+				{
+					coloca = false;
+					Catching = false;
+				}
+			}
+		}
+		catch
+		{
+			
+		}
 		segundos = Time.realtimeSinceStartup;
 		//Debug.Log (Time.realtimeSinceStartup);
 		if(segundos > tempo)
