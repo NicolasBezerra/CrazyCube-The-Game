@@ -15,8 +15,8 @@ public class MasterRotationFuck : MonoBehaviour {
 	// Use this for initializationz975
 	void Start ()
 	{
-		sensitivityX = 200.0f;
-		sensitivityY = 200.0f;
+		sensitivityX = 300.0f;
+		sensitivityY = 300.0f;
 		//cameraTm = Camera.main.transform;
 	}
 	

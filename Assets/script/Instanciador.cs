@@ -7,10 +7,12 @@ public class Instanciador : MonoBehaviour {
 	private GameObject bloco_am;
 	private GameObject bloco_v;
 	private GameObject bloco_ve;
+	private GameObject bloco_b;
+	private GameObject bloco_l;
 	private Vector3 lugar;
 	private float tempo = 1;
 	private float segundos;
-	public Color Mycolor;
+	public Material Mycolor;
 	public bool Catching = false;	
 	private int myInt;
 	public float CountTo;
@@ -25,6 +27,8 @@ public class Instanciador : MonoBehaviour {
 		bloco_am = Resources.Load ("CubeAmarelo") as GameObject;
 		bloco_v = Resources.Load ("CubeVermelho") as GameObject;
 		bloco_ve = Resources.Load ("CubeVerde") as GameObject;
+		bloco_b = Resources.Load ("CubeBranco") as GameObject;
+		bloco_l = Resources.Load ("CubeLaranja") as GameObject;
 		//Instantiate (bloco_pf , lugar , Quaternion.identity);
 	}
 	
@@ -59,7 +63,7 @@ public class Instanciador : MonoBehaviour {
 		//Debug.Log (Time.realtimeSinceStartup);
 		if(segundos > tempo)
 		{
-			myInt = Mathf.FloorToInt(Random.Range(0,4));
+			myInt = Mathf.FloorToInt(Random.Range(0,6));
 			switch(myInt)
 			{
 				case 0:
@@ -73,6 +77,12 @@ public class Instanciador : MonoBehaviour {
 				break;
 				case 3:
 					Instantiate (bloco_ve , lugar , Quaternion.identity);
+				break;
+				case 4:
+					Instantiate (bloco_l , lugar , Quaternion.identity);
+				break;
+				case 5:
+					Instantiate (bloco_b , lugar , Quaternion.identity);
 				break;
 			}
 			tempo += 1f;

@@ -18,10 +18,18 @@ public class ColorDefault : MonoBehaviour
 		counter = 0;
 		ContinueTry = true;
 		CanColor = true;
-		for(int i = 0; i < 54; i++)
+		try 
 		{
-			Faces[i].renderer.material.color = Color.white;
+			for (int i = 0; i < 54; i++) 
+			{
+				Faces [i].renderer.material = Resources.Load ("CubeDefault", typeof(Material)) as Material;
+			}
+		} 
+		catch 
+		{
+
 		}
+	
 	}
 	
 	void Update () 
@@ -46,19 +54,27 @@ public class ColorDefault : MonoBehaviour
 		CountTo += Time.deltaTime;
 		if(gameObject.name == "CubeM")
 		{
+
 			FaceScript baby;
 			baby = gameObject.GetComponent<FaceScript>();
 			if(CountTo > 10f)
 			{
 				CountTo = 0;
-				Faces[Random.Range(0,54)].renderer.material.color = Color.white;
+				try
+				{
+					Faces[Random.Range(0,54)].renderer.material = Resources.Load("CubeDefault", typeof(Material)) as Material;
+				}
+				catch
+				{
+
+				}
 			}
-			/*while(loving < 54)
+			while(loving < 54)
 			{
-				//if(VerifyColors(loving, baby))
-				//{
-//					amorzinho[loving] = true;
-			//	}
+				if(VerifyColors(loving, baby))
+				{
+					amorzinho[loving] = true;
+				}
 				loving ++;
 				for(int i = 0; i < 54; i++)
 				{
@@ -71,23 +87,23 @@ public class ColorDefault : MonoBehaviour
 				{
 					loving = 0;
 				}
-			}*/
+			}
 		}
 	}
 	void ChangingColors(FaceScript lol)
 	{
 		lol.ActualColor = Mathf.FloorToInt(Random.Range(1,5));	
 	}	
-	/*void VerifyColors(int i, FaceScript lol)
+	bool VerifyColors(int i, FaceScript lol)
 	{
 		lol = Faces[i].GetComponent<FaceScript>();
 		if(lol.ActualColor == ColorId.ActualColor)
 		{
-			this.return true;
+			return true;
 		}
 		else
 		{
-			
+			return false;
 		}
-	}*/
+	}
 }

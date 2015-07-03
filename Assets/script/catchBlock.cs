@@ -33,7 +33,7 @@ public class catchBlock : MonoBehaviour {
 	}
 	void OnMouseUp() 
 	{
-		CatchColor.Mycolor = gameObject.renderer.material.color;
+		CatchColor.Mycolor = gameObject.renderer.material;
 		CatchColor.coloca = true;
 		this.transform.gameObject.tag = "blocoExit";
 	}

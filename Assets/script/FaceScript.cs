@@ -23,7 +23,7 @@ public class FaceScript : MonoBehaviour
 		{
 			CatchColor.coloca = false;
 			CatchColor.Catching = false;
-			gameObject.renderer.material.color = CatchColor.Mycolor;
+			renderer.material = CatchColor.Mycolor;
 		}
 	
 	}
@@ -32,16 +32,22 @@ public class FaceScript : MonoBehaviour
 		switch(ActualColor)
 		{
 			case 1:
-				gameObject.renderer.material.color = Color.blue;
+				gameObject.renderer.material = Resources.Load ("CubeBlue", typeof(Material)) as Material;
 				break;
 			case 2:
-				gameObject.renderer.material.color = Color.green;
+				gameObject.renderer.material = Resources.Load ("CubeGreen", typeof(Material)) as Material;;
 				break;
 			case 3:
-				gameObject.renderer.material.color = Color.yellow;
+				gameObject.renderer.material = Resources.Load ("CubeYellow", typeof(Material)) as Material;;
 				break;
 			case 4:
-				gameObject.renderer.material.color = Color.red;
+				gameObject.renderer.material = Resources.Load ("CubeRed", typeof(Material)) as Material;;
+				break;
+			case 5:
+				gameObject.renderer.material = Resources.Load ("CubeWhite", typeof(Material)) as Material;;
+				break;
+			case 6:
+				gameObject.renderer.material = Resources.Load ("CubeOrange", typeof(Material)) as Material;;
 				break;
 		}
 	}
