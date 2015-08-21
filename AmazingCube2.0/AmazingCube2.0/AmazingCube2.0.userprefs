@@ -1,0 +1,25 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Intro\GerenciatorString.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Game\ColorDefault.cs" Line="35" Column="5" />
+      <File FileName="Assets\Scripts\Game\FadeScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game\TimeScript.cs" Line="64" Column="1" />
+      <File FileName="Assets\Scripts\Game\AceleratorScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game\MainCubeRotation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game\VerifyColor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game\FaceScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game\LevelControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Lost\LostScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SelectStage\GerenciatorStage.cs" Line="16" Column="10" />
+      <File FileName="Assets\Scripts\Menu\GerenciatorCanvas.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menu\FaceMenuS.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menu\CubeMScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Intro\GerenciatorString.cs" Line="32" Column="16" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
